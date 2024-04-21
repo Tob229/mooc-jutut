@@ -10,6 +10,7 @@ import timeusage.urls
 
 urlpatterns = [
     re_path(r'^', include(feedback.urls)),
+    re_path(r'^', include('django_prometheus.urls')),
     re_path(r'^timeusage/', include(timeusage.urls)),
     re_path(r'^', include(core.urls)),
     re_path(r'^i18n/', include('django.conf.urls.i18n')),
